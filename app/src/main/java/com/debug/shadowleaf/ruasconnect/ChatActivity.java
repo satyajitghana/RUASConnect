@@ -64,11 +64,12 @@ public class ChatActivity extends AppCompatActivity {
         tabAdapter.addFragment(new ChatFragment(), "Chat");
         tabAdapter.addFragment(new GroupFragment(), "Groups");
 
+        //tabAdapter.removeFragment(0);
 
         viewPager.setAdapter(tabAdapter);
         tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.removeTabAt(1);
+        //tabLayout.removeTabAt(1);
 
     }
 
@@ -154,6 +155,12 @@ class TabAdapter extends FragmentStatePagerAdapter {
     public void addFragment(Fragment fragment, String title) {
         fragmentList.add(fragment);
         fragmentTitleList.add(title);
+    }
+
+    public void removeFragment(int position) {
+        fragmentTitleList.remove(position);
+        fragmentList.remove(position);
+        notifyDataSetChanged();
     }
 
     @Override
