@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/userRow"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#bdc3c7"
+        android:paddingTop="10dp"
+        android:paddingLeft="30dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#2c3e50"
+            android:text="Satyajit Ghana"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_marginTop="5sp"
+            android:id="@+id/textView_regNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#2c3e50"
+            android:text="17ETCS002159"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

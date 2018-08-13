@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:background="#7f8c8d"
+    tools:context=".authentication.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_cloud_06" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="RUAS Connect"
+                    android:textSize="40dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical">
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:background="@drawable/edit_text_style"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/editText_Name"
+                    android:layout_width="match_parent"
+                    android:hint="Name"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"/>
+                <EditText
+                    android:background="@drawable/edit_text_style"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/editText_RegNo"
+                    android:layout_width="match_parent"
+                    android:hint="Reg No"
+                    android:layout_height="match_parent"
+                    android:inputType="text"/>
+                <EditText
+                    android:background="@drawable/edit_text_style"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/editText_Email"
+                    android:layout_width="match_parent"
+                    android:hint="Email"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"/>
+                <EditText
+                    android:background="@drawable/edit_text_style"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/editText_Password"
+                    android:layout_width="match_parent"
+                    android:hint="Password"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"/>
+                <EditText
+                    android:background="@drawable/edit_text_style"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/editText_ConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:hint="Confirm Password"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"/>
+
+            </LinearLayout>
+            </ScrollView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/button_Register"
+                    android:background="@drawable/button_style"
+                    android:elevation="4dp"
+                    android:translationZ="4dp"
+                    android:textColor="#ffffff"
+                    android:text="REGISTER"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_below="@+id/textView_forgot"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/textView_alreadyRegistered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:translationZ="6dp"
+                    android:text="Already Registered? Login"
+                    android:textSize="13dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/button_Register"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

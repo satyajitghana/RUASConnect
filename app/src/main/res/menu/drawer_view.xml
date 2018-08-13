@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group>
+        <item
+            android:id="@+id/nav_camera"
+            android:title="Camera" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:title="Gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:title="Slideshow" />
+        <item
+            android:icon="@drawable/ic_baseline_settings_20px"
+            android:id="@+id/nav_manage"
+            android:title="Settings" />
+    </group>
+    <group >
+        <item
+            android:id="@+id/logout"
+            android:title="Sign Out"
+            />
+    </group>
+</menu>
