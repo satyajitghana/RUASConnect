@@ -52,7 +52,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             String body = remoteMessage.getData().get("body");
             String title = remoteMessage.getData().get("title");
 
-            Log.d(TAG, urlImage);
+            //Log.d(TAG, urlImage);
 
             InputStream in;
             Bitmap myBitmap = null;
@@ -68,6 +68,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
+            //Log.d(TAG, myBitmap.toString());
 
             sendNotification(body, myBitmap);
 
@@ -133,8 +135,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 .bigPicture(myBitmap)
                 .setSummaryText("Summary Text");
 
-        NotificationCompat.Builder notificationBuilder =
-                new NotificationCompat.Builder(this, channelId)
+        NotificationCompat.Builder notificationBuilder;
+        if (myBitmap != null)
+            notificationBuilder = new NotificationCompat.Builder(this, channelId)
                         .setSmallIcon(R.drawable.ic_cloud_06)
                         .setContentTitle("FCM Message")
                         .setContentText(messageBody)
@@ -143,6 +146,14 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                         .setSound(defaultSoundUri)
                         .setContentIntent(pendingIntent)
                         .setStyle(style);
+        else
+            notificationBuilder = new NotificationCompat.Builder(this, channelId)
+                    .setSmallIcon(R.drawable.ic_cloud_06)
+                    .setContentTitle("FCM Message")
+                    .setContentText(messageBody)
+                    .setAutoCancel(true)
+                    .setSound(defaultSoundUri)
+                    .setContentIntent(pendingIntent);
 
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
